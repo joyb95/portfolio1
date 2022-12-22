@@ -1,0 +1,12 @@
+
+@use "all" as *;
+
+.round-btn-wrap {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    @include font-size (medium);
+    background: var(--primary-bg);
+    @include flex-lay-out (center);
+    color: var(--text-color);
+}

@@ -1,0 +1,28 @@
+
+/* custom scroll start */
+/* width */
+::-webkit-scrollbar
+{
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track
+{
+    background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+    background: var(--scrollBg);
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+{
+    background: var(--scrollBgHover);
+}
+/* custom scroll end */
+

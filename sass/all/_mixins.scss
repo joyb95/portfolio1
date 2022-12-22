@@ -1,0 +1,42 @@
+
+
+@mixin flex-lay-out ($alingMent) {
+    display: flex;
+    align-items: center;
+
+    @if ($alingMent == center) {
+        justify-content: center;
+    }
+
+    @else if ($alingMent == between) {
+        justify-content: space-between;
+    }
+
+    @else if ($alingMent == evenly) {
+        justify-content: space-evenly;
+    }
+
+    @else if ($alingMent == around) {
+        justify-content: space-around;
+    }
+}
+
+@mixin font-size ($fontSize) {
+    @if ($fontSize == small) {
+        font-size: .9rem;
+    }
+
+    @else if ($fontSize == medium) {
+        font-size: 1.1rem;
+    }
+
+    @else if ($fontSize == large) {
+        font-size: 1.5rem;
+    }
+
+    @else if ($fontSize == extraLarge) {
+        font-size: 1.9rem;
+    }
+}
+
+

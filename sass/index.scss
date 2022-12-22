@@ -1,0 +1,12 @@
+@use "all" as *;
+@use "header" as *;
+@use "theme" as *;
+@use "styles" as *;
+@use "home" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font1;
+}
