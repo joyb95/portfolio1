@@ -1,9 +1,14 @@
 
+// for header sticky
+let headerMainWrap = document.querySelector('.headerMainWrap');
+window.addEventListener('scroll', function () {
+    headerMainWrap.classList.toggle('sticky', window.scrollY > 0);
+})
 
-let themeArrow = document.querySelector('.themeArrow');
+let themeBtn = document.querySelector('.themeBtn');
 let themeSection = document.querySelector('.themeSection');
 
-themeArrow.onclick = function () {
+themeBtn.onclick = function () {
     themeSection.classList.toggle('active');
 }
 

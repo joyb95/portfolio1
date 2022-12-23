@@ -2,11 +2,9 @@
 @use "all" as *;
 
 .round-btn-wrap {
-    width: 41px;
-    height: 41px;
+    width: 39px;
+    height: 39px;
     border-radius: 50%;
-    @include font-size (medium);
-    background: var(--primary-bg);
-    @include flex-lay-out (center);
-    color: var(--text-color);
+    background: var(--body-bg);
+    @include flex-lay-out(center);
 }

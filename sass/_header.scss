@@ -8,18 +8,43 @@
     position: fixed;
     top: 0;
     left: 0;
+    transition: .5s;
 
     .header-wrap {
         width: 1170px;
         @include flex-lay-out (between);
 
         .logo {
+            padding: 7px 17px;
             text-transform: capitalize;
             background: var(--gradient);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
             background-size: 700%;
+            position: relative;
             animation: logoAnimation 13s linear infinite;
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: var(--theme-color);
+            left: 0;
+            bottom: 0;
+            animation: logoBeforeAnimate 3s linear infinite alternate;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            height: 0%;
+            width: 2px;
+            left: 0;
+            bottom: 0;
+            background: var(--theme-color);
+            animation: logoAfterAnimate 3s linear infinite alternate;
         }
 
         .menu-theme-section {
@@ -34,11 +59,12 @@
                 .primary-menu-item {
 
                     .primary-menu-link {
-                        color: var(--text-color);
+                        color: var(--theme-color);
                         @include font-size (medium);
+                        letter-spacing: 1.1px;
                         display: inline-block;
                         padding: 9px 21px;
-                        background: var(--primary-bg);
+                        // background: var(--primary-bg);
                         margin: 0 3px;
                         text-decoration: none;
                         text-transform: capitalize;
@@ -56,10 +82,6 @@
                         transition: .5s;
                     }
 
-                    .primary-menu-link.active {
-                        color: var(--theme-color);
-                    }
-
                     .primary-menu-link.active::before,
                     .primary-menu-link:hover::before {
                         width: 100%;
@@ -68,13 +90,14 @@
                 }
             }
 
-            .theme-arrow {
+            .theme-btn {
                 @extend .round-btn-wrap;
                 position: relative;
 
-                .themeArrow {
+                .themeBtn {
                     cursor: pointer;
-                    @include font-size (large);
+                    font-size: 1.3rem;
+                    color: var(--text-color);
                 }
 
                 .theme-section {
@@ -86,14 +109,15 @@
                     opacity: 0;
                     background: var(--primary-bg);
                     padding: 5px 0;
-                    transition: .5s;
+                    border-radius: 7px;
+                    transition: .3s;
 
                     .dark-light-theme-color-theme {
                         @include flex-lay-out (center);
                         flex-direction: column;
 
                         .theme {
-                            padding: 5px 15px;
+                            padding: 7px 15px;
                             @include font-size(small);
                             border: none;
                             outline: none;
@@ -102,9 +126,13 @@
                             color: var(--text-color);
                             margin-bottom: 9px;
                             overflow: hidden;
+                            -webkit-appearance: none;
+                            border: 1px dotted var(--theme-color);
+                            text-align: center;
+                            transition: .3s;
 
                             .theme-option {
-                                @include font-size(medium);
+                                @include font-size(small);
                             }
                         }
 
@@ -115,7 +143,7 @@
                             padding: 0px 15px;
 
                             .theme-color-heading {
-                                color: var(--text-color);
+                                color: var(--theme-color);
                             }
 
                             .theme-colors {
@@ -163,4 +191,9 @@
             }
         }
     }
+}
+
+.header-main-wrap.headerMainWrap.sticky {
+    height: 65px;
+    background: var(--primary-bg);
 }
