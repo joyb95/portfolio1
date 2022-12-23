@@ -8,4 +8,14 @@
     background-size: 100%;
     background-position: cover;
     background-attachment: fixed;
+
+    .wave1 {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: rotate(180deg);
+        fill: var(--body-bg);
+        z-index: 1;
+    }
 }
