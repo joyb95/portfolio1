@@ -4,10 +4,52 @@
 .home-main-wrap {
     width: 100%;
     height: 100vh;
-    background: url('https://lh3.googleusercontent.com/qaWkTtfbT_u8-lzgqnIctqlA99P1EyeY87VYJrzRCau_8Eit1hhJ8sgBmroRsc6v-4bhKPzKgoRNNg-16QMWYO4Htu0AAyAvCLmD0RQDSq1Bb_iRiWn5HW2dUMc1mgQBEnWjOYgigg=w2400');
+    background-image: url('https://lh3.googleusercontent.com/qaWkTtfbT_u8-lzgqnIctqlA99P1EyeY87VYJrzRCau_8Eit1hhJ8sgBmroRsc6v-4bhKPzKgoRNNg-16QMWYO4Htu0AAyAvCLmD0RQDSq1Bb_iRiWn5HW2dUMc1mgQBEnWjOYgigg=w2400'), -webkit-linear-gradient(#000000, var(--theme-color));
     background-size: 100%;
     background-position: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    @include flex-lay-out(center);
+
+    .home-wrap {
+        width: 1170px;
+        height: 100%;
+        @include flex-lay-out(center);
+
+        .home-content-wrap {
+            @include flex-lay-out(center);
+            flex-direction: column;
+
+            .home-text {
+                text-transform: capitalize;
+                letter-spacing: 1.5px;
+                color: var(--text-color);
+                @include font-size(medium);
+                text-shadow: .5px .5px .5px var(--text-shadow-color);
+            }
+
+            .home-text span {
+                color: var(--theme-color);
+                font-family: $font4;
+                @include font-size(extraLarge);
+                text-shadow: .5px .5px .5px rgb(0, 81, 255);
+            }
+
+            .home-text3 {
+                @include font-size(large);
+                font-weight: 700;
+                font-family: $font4;
+            }
+
+            .typing-wrap .home-text5 {
+                @extend .home-text3;
+                @include font-size(extraLarge);
+                color: var(--theme-color);
+                text-shadow: .5px .5px .5px rgb(0, 81, 255);
+            }
+        }
+    }
 
     .wave1 {
         position: absolute;

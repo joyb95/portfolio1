@@ -14,6 +14,8 @@
 
     // gradient
     --dark-gradient: linear-gradient(90deg, rgba(0,255,244,1) 0%, rgba(232,255,0,1) 30%, rgba(0,202,255,1) 52%, rgba(0,255,21,1) 77%, rgba(0,255,244,1) 100%);
+
+    --dark-text-shadow-color: rgb(0, 255, 170);
 }
 
 body {
@@ -37,6 +39,8 @@ body {
 
     // gradient
     --gradient: linear-gradient(90deg, rgba(255,132,0,1) 0%, rgba(255,0,121,1) 30%, rgba(255,0,44,1) 52%, rgba(255,0,206,1) 77%, rgba(255,132,0,1) 100%);
+
+    --text-shadow-color: rgb(39, 136, 0);
 }
 
 body.theme-dark {
@@ -53,6 +57,8 @@ body.theme-dark {
 
     // gradient
     --gradient: var(--dark-gradient);
+
+    --text-shadow-color: var(--dark-text-shadow-color);
 }
 
 @media (prefers-color-scheme: dark) {

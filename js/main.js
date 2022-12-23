@@ -55,3 +55,12 @@ themeColor[4].onclick = function () {
     document.body.classList.add('color4');
 }
 
+// for typing text 1
+var typed = new Typed('.typing1', {
+    strings: ["freelancher", "web developer", "web designer", "graphic designer"],
+    typeSpeed: 30,
+    backSpeed: 0,
+    cursorChar: ' |',
+    // fadeOut: true,
+    loop: true
+});
